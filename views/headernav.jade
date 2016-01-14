@@ -1,0 +1,19 @@
+.invisible_disabled
+  .navbar.navbar-inverse.navbar-static-top
+      .container
+        a.navbar-brand(href='/') Shaopeng's Website
+        button.navbar-toggle(data-toggle='collapse', data-target='.navHeaderCollapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        .collapse.navbar-collapse.navHeaderCollapse
+          ul.nav.navbar-nav.navbar-right.s-header-list
+            - var menuItemList = {'Home': '/', 'Education': '/education', 'Experience': '/experience', 'Photography': '/photography', 'Contact': '/contact' };
+
+              each val, key in menuItemList
+                if title === key
+                  li.active
+                    a(href=val, title=key)= key
+                else
+                  li
+                    a(href=val, title=key)= key

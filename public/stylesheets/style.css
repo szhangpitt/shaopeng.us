@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+ body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: inherit;
+    color: inherit;
+    -webkit-transition: all 0.5s ease;
+}
+body.s-dark {
+    background: #333;
+    color: #eee;
+    -webkit-transition: background 0.5s ease;
+}
+.navbar {
+    font-size: 1.3em
+}
+
+.s-invisible {
+    visibility: hidden !important;
+}
+.s-home-jumbotron {
+    background: rgba(0, 0, 0, 0);
+}
+.s-banner {
+    position: relative;
+}
+.s-banner-img {} .s-banner .s-cover {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    position: absolute;
+    top: 0;
+}
+
+
+.s-banner.translucent .s-jumbotron-text {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease;
+}
+.s-jumbotron-text {
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    padding: 1em;
+    max-width: 45%;
+    z-index: 99;
+}
+.s-jumbotron-text h2 {
+    font-size: 2.6em;
+}
+.s-light-switch {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    /*    background: url(../assets/lamp.svg) no-repeat center center;*/
+    text-decoration: none !important;
+    width: 16px;
+}
+.s-light-switch path {
+    fill: #666666;
+    -webkit-transition: fill 1s ease;
+}
+.s-light-switch:hover path {
+    fill: #333333;
+    -webkit-transition: fill 1s ease;
+}
+.s-dark .s-light-switch path {
+    fill: #666666
+}
+.s-dark .s-light-switch:hover path {
+    fill: #eeeeee;
+    -webkit-transition: fill 1s ease;
+}
+.story {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    position: relative;
+    padding: 0.5em;
+    background: #fff;
+    box-shadow: 1px 1px 9px #ccc;
+}
+.s-dark .story {
+    color: #333;
+    box-shadow: 1px 1px 9px #000;
+}
+.story img {
+    /*    max-width: 480px;*/
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.story iframe {
+    margin-left: auto;
+    margin-right: auto;
+}
+.story p {
+    /*    position: absolute;*/
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    /*max-width: 480px;*/
+    margin: 0 auto;
+    padding: 0.3em;
+}
+.story li {
+    list-style: none;
+}
+.experience .row .col-sm-6{
+    padding-left: 0;
+    padding-right: 0;
+}
+.experience .story li{
+    text-indent: -0.5em;
+}
+.experience .story img {
+    max-width: 1024px;
+}
+.experience .story p {
+    margin: 0;
+    max-width: 1024px;
+}
+.experience.container .row {
+    margin-left: auto;
+    margin-right: auto;
+}
+.photography .story p {
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Extra small devices (phones, less than 768px) */
+
+/* No media query since this is the default in Bootstrap */
+
+@media(max-width:767px){
+
+.s-jumbotron-text {
+    position: relative;
+    max-width: 100%;
+    padding-left: 0;
+    
+}
+
+.s-banner .s-cover {
+    display: none;
+}
+    
+
+}
+
+@media(max-width:991px){
+.experience .story img {
+    margin-top: 1em;
+    max-width: 320px;
+}
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media(min-width:768px){
+
+.s-jumbotron-text {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 0.8em;
+    max-width: 50%;
+}
+.s-dark .s-jumbotron-text{
+    color: #333;
+}
+
+}
+/* Medium devices (desktops, 992px and up) */
+
+@media(min-width:992px) {
+    .s-jumbotron-text {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        font-size: 1em;
+        max-width: 45%;
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+
+@media(min-width:1200px){
+
+.s-banner {
+    margin-left:12%;
+}
+}
